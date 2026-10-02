@@ -51,7 +51,7 @@ export default function Hero() {
           <div className="flex justify-center md:justify-end">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <img 
-                src="C:\Users\rubin\OneDrive\Documents\my-portfolio\my-portfolio\public\images\img.webp" 
+                src="images/me.jpeg"
                 alt="Profile" 
                 className="w-full h-full rounded-2xl object-cover border-4 border-blue-400 shadow-2xl"
               />
