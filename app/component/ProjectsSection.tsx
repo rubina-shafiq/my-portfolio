@@ -2,7 +2,7 @@ import ProjectCard from './ProjectCard'
 
 export default function ProjectsSection() {
   const projects = [
-    {{
+    {
   id: 1,
   title: "AZ Advisory",
   description: "Professional website for tax and business advisory services. Modern design with service showcase and client testimonials.",
@@ -15,21 +15,8 @@ export default function ProjectsSection() {
     "Client testimonials section",
     "Contact form integration"
   ]
-}
-    {
-      id: 2,
-      title: "Job Search Tracker",
-      description: "Application to track job applications, interviews, and offers.",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity"],
-      liveLink: "https://job-tracker-demo.vercel.app",
-      githubLink: "https://github.com/yourusername/job-tracker",
-      features: [
-        "Add and manage job applications",
-        "Track interview dates and notes",
-        "Status filtering and sorting",
-        "Statistics dashboard"
-      ]
-    },
+},
+    
   {
   id: 3,
   title: "Todo Application",
