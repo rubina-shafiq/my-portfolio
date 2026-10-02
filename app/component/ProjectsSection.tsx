@@ -18,7 +18,7 @@ export default function ProjectsSection() {
 },
     
   {
-  id: 3,
+  id: 2,
   title: "Todo Application",
   description: "Task management app built with React and Next.js. Add, complete, and delete tasks with persistent storage.",
   technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
