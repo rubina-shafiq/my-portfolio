@@ -2,20 +2,20 @@ import ProjectCard from './ProjectCard'
 
 export default function ProjectsSection() {
   const projects = [
-    {
-      id: 1,
-      title: "AZ Smart Tax Advisors",
-      description: "Professional website for a tax advisory firm showcasing services and expertise.",
-      technologies: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
-      liveLink: "https://azsmarttax.com",
-      githubLink: "https://github.com/yourusername/az-smart-tax",
-      features: [
-        "Responsive design for all devices",
-        "Dynamic content from Sanity CMS",
-        "Service showcase and client testimonials",
-        "Contact form with email integration"
-      ]
-    },
+    {{
+  id: 1,
+  title: "AZ Advisory",
+  description: "Professional website for tax and business advisory services. Modern design with service showcase and client testimonials.",
+  technologies: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
+  liveLink: "https://azadvisory.vercel.app",
+  githubLink: "https://github.com/rubina-shafiq/az_advisory",
+  features: [
+    "Responsive professional design",
+    "Service showcase and pricing",
+    "Client testimonials section",
+    "Contact form integration"
+  ]
+}
     {
       id: 2,
       title: "Job Search Tracker",
