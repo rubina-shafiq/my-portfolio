@@ -1,4 +1,3 @@
-// components/ProjectsSection.tsx
 import ProjectCard from './ProjectCard'
 
 export default function ProjectsSection() {
@@ -7,7 +6,6 @@ export default function ProjectsSection() {
       id: 1,
       title: "AZ Smart Tax Advisors",
       description: "Professional website for a tax advisory firm showcasing services and expertise.",
-      image: "/images/project1.jpg",
       technologies: ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
       liveLink: "https://azsmarttax.com",
       githubLink: "https://github.com/yourusername/az-smart-tax",
@@ -22,7 +20,6 @@ export default function ProjectsSection() {
       id: 2,
       title: "Job Search Tracker",
       description: "Application to track job applications, interviews, and offers.",
-      image: "/images/project2.jpg",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity"],
       liveLink: "https://job-tracker-demo.vercel.app",
       githubLink: "https://github.com/yourusername/job-tracker",
@@ -33,41 +30,43 @@ export default function ProjectsSection() {
         "Statistics dashboard"
       ]
     },
-    {
-      id: 3,
-      title: "Todo App with Categories",
-      description: "Stylish todo application with category organization and dark mode.",
-      image: "/images/project3.jpg",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-      liveLink: "https://todo-app-demo.vercel.app",
-      githubLink: "https://github.com/yourusername/todo-app",
-      features: [
-        "Create, edit, delete tasks",
-        "Organize by categories",
-        "Dark and light mode toggle",
-        "Local storage persistence"
-      ]
-    }
+  {
+  id: 3,
+  title: "Todo Application",
+  description: "Task management app built with React and Next.js. Add, complete, and delete tasks with persistent storage.",
+  technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+  liveLink: "https://my-todo-app-dun-psi.vercel.app",
+  githubLink: "https://github.com/rubina-shafiq/my-todo-app",
+  features: [
+    "Add and delete tasks",
+    "Mark tasks complete",
+    "Real-time stats dashboard",
+    "Browser storage persistence"
+  ]
+}
   ]
 
   return (
-    <section id="projects" className="bg-gray-900 py-20 md:py-32">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="bg-slate-900 py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            My Projects
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <span className="text-blue-400 text-sm font-semibold uppercase tracking-wider">
+            Portfolio
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-2 mb-4">
+            Featured Projects
           </h2>
-          <p className="text-gray-400 text-lg">
-            Here are some of my best work showcasing my skills
+          <p className="text-slate-400 text-base sm:text-lg">
+            A selection of recent work showcasing full-stack development skills and technical capabilities.
           </p>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mt-6"></div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map(project => (
+        {/* Projects Responsive Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

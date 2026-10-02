@@ -1,9 +1,11 @@
-// components/ProjectCard.tsx
+import { ExternalLink , CheckCircle2 } from "lucide-react"
+import { FaGithub } from "react-icons/fa";
+
+
 interface Project {
   id: number
   title: string
   description: string
-  image: string
   technologies: string[]
   liveLink: string
   githubLink: string
@@ -16,66 +18,71 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
-      
-      {/* Project Image */}
-      <div className="relative h-64 overflow-hidden bg-gray-300">
-        <img 
-          src={project.image} 
-          alt={project.title}
-          className="w-full h-full object-cover hover:scale-110 transition duration-300"
-        />
-      </div>
-
-      {/* Project Content */}
-      <div className="p-8">
-        
-        {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">
-          {project.title}
-        </h3>
+    <div className="group relative bg-slate-800/80 border border-slate-700/60 rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1 backdrop-blur-sm">
+      <div>
+        {/* Header Title */}
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+            {project.title}
+          </h3>
+        </div>
 
         {/* Description */}
-        <p className="text-gray-600 mb-4 leading-relaxed">
+        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
           {project.description}
         </p>
 
-        {/* Features */}
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-          <ul className="list-disc list-inside text-gray-600 space-y-1">
+        {/* Key Features */}
+        <div className="mb-6 space-y-2">
+          <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            Key Features
+          </h4>
+          <ul className="space-y-1.5">
             {project.features.map((feature, idx) => (
-              <li key={idx}>{feature}</li>
+              <li key={idx} className="flex items-start text-xs sm:text-sm text-slate-300 gap-2">
+                <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                <span>{feature}</span>
+              </li>
             ))}
           </ul>
         </div>
+      </div>
 
-        {/* Technologies */}
-        <div className="mb-6">
+      <div>
+        {/* Technologies Badges Grid */}
+        <div className="mb-6 pt-4 border-t border-slate-700/50">
           <div className="flex flex-wrap gap-2">
-            {project.technologies.map(tech => (
-              <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="bg-slate-900/80 text-blue-300 border border-blue-500/20 px-2.5 py-1 rounded-md text-xs font-medium"
+              >
                 {tech}
               </span>
             ))}
           </div>
         </div>
 
-        {/* Links */}
-        <div className="flex gap-4">
-          <a 
-            href={project.liveLink} 
+        {/* Action Links Grid */}
+        <div className="grid grid-cols-2 gap-3">
+          <a
+            href={project.liveLink}
             target="_blank"
-            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition duration-300"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 px-3 rounded-lg text-sm transition-all duration-200 shadow-md shadow-blue-600/20"
           >
-            Live Demo
+            <ExternalLink className="w-4 h-4" />
+            <span>Live Demo</span>
           </a>
-          <a 
-            href={project.githubLink} 
+          <a
+            href={project.githubLink}
             target="_blank"
-            className="flex-1 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-2 px-4 rounded-lg text-center transition duration-300"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-slate-700/60 hover:bg-slate-700 text-slate-200 hover:text-white font-medium py-2 px-3 rounded-lg text-sm border border-slate-600/50 transition-all duration-200"
           >
-            GitHub
+
+            <FaGithub className="w-4 h-4" />
+            <span>Code</span>
           </a>
         </div>
       </div>
